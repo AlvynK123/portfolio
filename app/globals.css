@@ -2,21 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -24,4 +10,87 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 221.2 83.2% 24%; /* changed */
+    --card: 0 0% 100%;
+    --card-foreground: 221.2 83.2% 24%; /* changed */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%; 
+    --primary: 221.2 83.2% 53.3%; /* changed */
+    --primary-foreground: 210 40% 98%; /* changed */
+    --secondary: 221.2 83.2% 24%; /* changed */
+    --secondary-foreground: 210 40% 98%;  /* changed */
+    --tertiary: 210 40% 96.1%; /* changed */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 221.2 83.2% 44%; /* changed */
+    --accent: 210 40% 96.1%; /* changed */
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 221.2 83.2% 88%; /* changed */
+    --input: 221.2 83.2% 88%; /* changed */
+    --ring: 221.2 83.2% 53.3%; /* changed */
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 221.2 83.2% 14%; /* changed */
+    --foreground: 210 40% 98%;
+    --card: 221.2 83.2% 14%; /* changed */
+    --card-foreground: 210 40% 98%; /* changed */
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 221.2 83.2% 53.3%; /* changed */
+    --primary-foreground: 210 40% 98%; /* changed */
+    --secondary: 221.2 83.2% 14%; /* changed */
+    --secondary-foreground: 210 40% 98%; /* changed */
+    --tertiary: 221.2 83.2% 14%; /* changed */
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 221.2 83.2% 73%; /* changed */
+    --accent: 221.2 83.2% 14%; /* changed */
+    --accent-foreground: 210 40% 98%; /* changed */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 221.2 83.2% 14%; /* changed */
+    --input: 221.2 83.2% 14%; /* changed */
+    --ring: 221.2 83.2% 53.3%; /* changed */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.h1 {
+  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+}
+
+.subtitle {
+  @apply text-muted-foreground text-lg mb-8 font-light;
+}
+
+.section-title {
+  @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3 before:bg-dots_light before:dark:bg-dots_dark before:bg-no-repeat before:bg-center before:w-[24px] before:h-[24px];
 }
