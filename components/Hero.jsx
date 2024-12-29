@@ -35,7 +35,7 @@ const Hero = () => {
             </div>
             <h1 className='h1 mb-4'>Hello, my name is Alvyn Kwon</h1>
             <p className='subtitle max-w-[490px] mx-auto xl:mx-0'>I'm a current Computer Science 
-              student at the Georgia Tech and I'm 
+              student at Georgia Tech and I'm 
               concentrating in Information Internetworks and Intelligence.
             </p>
             {/* buttons */}
