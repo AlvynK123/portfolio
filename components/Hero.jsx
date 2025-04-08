@@ -42,7 +42,7 @@ const Hero = () => {
               <Button onClick={scrollToContact} className='gap-x-2'>
                 Contact Me<Send size={18}/>
               </Button>
-              <a href="/resume.pdf" download>
+              <a href="/AlvynKwon_Resume.pdf" download>
                 <Button variant='secondary' className='gap-x-2'>Download CV <Download size={18} /></Button>
               </a>
             </div>
